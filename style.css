@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #c9d7ed, #90c9f8, #4c9bf0);
+    color: #333;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.album-container {
+    text-align: center;
+    padding: 5px;
+    width: 80%;
+}
+
+header {
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255,0.6);
+    width: 100%;
+}
+
+header img {
+    height: 70px;
+    display: inline-block;
+}
+.logo-text{
+    display: inline-block;
+    
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #cc242c;
+    text-align: center;
+    display: inline;
+    text-decoration: underline;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #000000;
+    font-weight: bolder;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.photo-grid {
+    display: grid;
+    /* grid-template-columns: repeat(4, minmax(180px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 510px;
+    gap: 10px;
+}
+
+.photo {
+    background: rgba(255, 255, 255,0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.photo img {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+}
+
+.photo p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #018bcc;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px 0px 60px;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: underline;
+    color: #018bcc;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0040ff;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    margin: 10px;
+    font-size: 1.5rem;
+    color: #171717;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0040ff;
+}
+.content {
+    max-width: 50%;
+    text-align: center;
+    font-weight: bolder;
+    padding-left: 45px;
+}
+
+.map-container  {
+    max-width: 50%;
+    text-align: center;
+    font-weight: bolder;
+}
+.map-container iframe{
+    border-radius: 10px;
+}
+
+.story-section,
+.notes-section {
+    margin-top: 50px;
+    text-align: left;
+    padding: 20px;
+    width: 60%;
+    background: rgba(20, 33, 71, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #23076f;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.story-section ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.story-section h4 {
+    margin-bottom: 10px;
+    color: #018bcc;
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+.story-section li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #111112;
+    padding-left: 10px;
+}
+
+.story-section img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.notes-section img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.notes-section .note p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #060c48;
+    font-weight: bold;
+}
+
+.note {
+    background: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 10px ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 30%;
+}
+.note a{
+    text-decoration: none;
+    color: #018bcc;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: #cc242c;
+    background-color: rgba(255, 255, 255,0.6);
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+}
+
+footer p {
+    font-weight: bold;
+}
+@media (max-width: 480px){
+    .nav-container{
+        flex-direction: column;
+    }
+    .story-section, .notes-section{
+        width: 80%;
+        margin-top: 30px;
+        flex-direction: column-reverse;
+    }
+    .story-section img{
+        width: 100%;
+    }
+    .notes-section img{
+        width: 100%;
+    }
+    .content{
+        padding: 0;
+        max-width: 100%;
+    }
+    .note{
+        width: 70%;
+    }
+    .map{
+        width: 200%;
+    }
+    .photo-grid{
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+    }
+    footer{
+        position: static;
+        height:35px;
+    }
+}
